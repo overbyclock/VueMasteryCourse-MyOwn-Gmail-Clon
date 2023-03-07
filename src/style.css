@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Montserrat', 'Trebuchet MS', sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: #242424;
+}
+#app {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.container-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.email-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.email-table tr {
+  border-top: 1px solid whitesmoke;
+  background-color: #141413;
+}
+
+.email-table tr:last-child {
+  border-bottom: 1px solid whitesmoke;
+}
+.email-table td,
+.email-table td p {
+  padding: 10px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.email-table td p strong {
+  color: rgb(126, 37, 209);
+  font-weight: bold;
+}
+
+tr {
+  height: 30px;
+}
+small {
+  color: rgb(92, 29, 151);
+}
+.unread-email {
+  background: rgb(36, 35, 35) !important;
+}
+
+.time-data-table {
+  width: 150px;
+}
+.btn-info {
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(105, 17, 187);
+  font-style: bold;
+}
+.btn-info:hover {
+  background: rgb(140, 59, 216);
+}
+
+.btn-info:disabled {
+  cursor: none;
+  background: grey;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 800px;
+  padding: 100px;
+  border: 3px solid whitesmoke;
+  border-radius: 15px;
+  background-color: #141413c5;
+}
+
+.email-container h2 {
+  color: rgb(105, 17, 187);
+  font-weight: bold;
+  text-align: center;
+}
+.email-container .info {
+  color: grey;
+  text-align: center;
+}
+
+.email-container .body {
+  text-align: left;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  background-color: black;
+  width: 36px;
+  height: 36px;
+  appearance: none;
+  border: 2px solid #888;
+  transition: background-color 0.3s ease-in-out;
+}
+input[type='checkbox']:checked {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+input[type='checkbox']:hover {
+  border: 2px solid rgb(47, 5, 87);
+}
+
+.container-actions {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 20px;
+}
+
+input[type='checkbox'].partial-check {
+  background-color: rgb(105, 17, 187);
+}
+
+.someEmailsSelected {
+  background: purple;
+}
+
+/**Background*/
+
+body {
+  --u: 2.5vmin;
+  --c1: hsl(0deg 0% 0%);
+  --c2: hsl(212deg 4% 9%);
+  --c3: hsl(212deg 7% 36%);
+  --gp: 50% / calc(var(--u) * 5) calc(var(--u) * 10);
+  --bp: calc(var(--u) * -2.5) calc(var(--u) * -5);
+  height: 100vh;
+  --bg: radial-gradient(circle at 50% 25%, var(--c2) 23%, #fff0 25% 100%) var(--gp),
+    conic-gradient(from 270deg at 34% 46%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    conic-gradient(from 45deg at 66% 46%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    conic-gradient(from 180deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    conic-gradient(from 135deg at 50% 80%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    conic-gradient(from 0deg at 0% 20%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    conic-gradient(from -45deg at 100% 20%, var(--c2) 0 12.5%, #fff0 0 100%) var(--gp),
+    linear-gradient(180deg, var(--c2) 0 4.5%, #fff0 0 45.25%, var(--c2) 0 50%, #fff0 0% 100%) var(--gp),
+    radial-gradient(circle at 50% 25%, #fff0 0 25%, var(--c2) 26% 32%, #fff0 0 100%) var(--gp),
+    linear-gradient(165deg, var(--c3) -15%, var(--c1) 44%, #fff0 0 100%) var(--gp),
+    linear-gradient(180deg, var(--c1) 50%, #fff0 0 100%) var(--gp);
+  background: var(--bg), var(--bg);
+  background-position: var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp), var(--bp),
+    var(--bp), var(--bp), 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  background-color: var(--c2);
+}
